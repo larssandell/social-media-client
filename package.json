@@ -9,8 +9,10 @@
         "start": "sass --watch src/scss:dist/css & live-server",
         "prepare": "husky install",
         "lint": "eslint src/**/*.js",
-        "test": "npm run test-unit",
-        "test-unit": "jest"
+        "unit": "npm run test-unit",
+        "test-unit": "jest",
+        "test": "npm run test-e2e",
+        "test-e2e": "cypress open"
     },
     "keywords": [],
     "author": "",
@@ -29,7 +31,8 @@
         "sass": "^1.54.8"
     },
     "dependencies": {
-        "bootstrap-dark-5": "^1.1.3"
+        "bootstrap-dark-5": "^1.1.3",
+        "eslint-plugin-jest": "^27.1.4"
     },
     "lint-staged": {
         "*.js": [
